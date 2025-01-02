@@ -1,53 +1,76 @@
 <!DOCTYPE html>
-<html  oncontextmenu=self.event.returnValue=false onselectstart="return false">
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="source/js/header.js"></script>
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_2037988_8uzxiubtutg.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bynotes/texiao/source/css/shubiao.css">
-    <title>碎语 - LRS</title>
+    <meta charset="UTF-8">
+    <title>多篇文章展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .article-title {
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .article-content {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .source-link {
+            font-size: 14px;
+            color: #0066cc;
+        }
+    </style>
 </head>
 <body>
-    <noscript> <iframe src="*.htm"></iframe> </noscript>
-    <SCRIPT language=JavaScript>
-        document.oncontextmenu = nocontextmenu;
-        document.onmousedown = norightclick;
-        document.ondragstart = noDragstart;
-        document.onselectstart = noSelect;
-        document.onselect = document.selection.empty();
-        document.onkeydown = keyDown;
-    </SCRIPT>
-    <div class="change" id="card">
-        <a style="padding:2%;" href="/"><img class="change" id="favorite" style="float:left;width:80px;margin-top:-15px;margin-left:-15px;" src="source/img/favorite.jpg"></a>
-        <div style="padding:1%;float:left;"><b style="font-size:150%;">碎语<br></b>Say</div>
+    <section>
+        <!-- 文章1 -->
+        <article>
+            <h1 class="article-title">网络虚拟化技术与应用</h1>
+            <div class="article-content">
+                <p>1. 网络虚拟化技术概述</p>
+                <p>网络虚拟化是一种在单一物理网络上创建多个虚拟网络的技术，使得网络资源可以被抽象、分区和模拟，以适应各种不同的网络需求。它旨在提高网络的灵活性、可扩展性和资源利用率。通过网络虚拟化，IT部门可以更快速地部署网络服务，而无需对物理基础架构进行大规模改动。</p>
+                <p>网络虚拟化技术的发展与云计算和数据中心的兴起密切相关。最初，它起源于对隔离、安全性和资源控制的需求。随着技术的进步，网络虚拟化已经演变为包括软件定义网络(SDN)和网络功能虚拟化(NFV)等多种实现方式。网络虚拟化的主要优势包括资源优化利用、网络服务快速部署和管理简化。传统的物理网络架构往往需要复杂的配置和手动干预，而网络虚拟化则通过抽象层简化了这些过程，使得网络服务能够以软件定义的方式快速适应业务需求变化。</p>
+                <p>2. 网络虚拟化的核心原理</p>
+                <p>网络虚拟化是一种将网络资源抽象化的技术，它可以将物理网络设备和服务解耦合，使多个虚拟网络在同一个物理基础设施上运行。这种技术允许网络资源能够按需分配，提供比传统网络更加灵活和动态的管理方式。网络虚拟化关键特性包括多租户支持、快速部署、灵活的资源配置和优化的网络利用。</p>
+                <p>在讨论网络虚拟化时，可以参照 OSI 七层模型，每个层次都有可能进行虚拟化操作。例如，虚拟化可以在数据链路层（虚拟交换机），网络层（虚拟路由器），传输层（虚拟负载均衡器）或者应用层（如虚拟防火墙）进行。每一层的虚拟化可以提供不同级别的抽象化，从而实现不同的网络功能和服务。</p>
+                <!-- 在这里添加文章1的更多段落 -->
+            </div>
+            <footer>
+                <p class="source-link">文章来源：<a href="https://wenku.csdn.net/column/423htkpqjq" target="_blank">源网址1</a></p>
+            </footer>
+        </article>
         
-        <br><br><br>
-        <div style="padding:3%;">
-            <!-- 引用 HexoPlusPlus_Talk组件 -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/talk.css" /> 
-            <script src="https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/talk_user.js"></script>
-            <!-- 创建HexoPlusPlus_Talk容器 -->
-            <div id="hpp_talk"></div>
-            <!-- 激活HexoPlusPlus_Talk -->
-            <script>
-                new hpp_talk({
-                id:"hpp_talk",//容器id
-                domain: "admin.ye-tutu.workers.dev",//您的HexoPlusPlus域名，如admin.cyfan.top
-                limit:8,//单次获取的最多条数
-                start: 0,//从第几条开始
-                themecss: "https://cdn.jsdelivr.net/gh/HexoPlusPlus/CDN@master/plugin/style/heimu.css" //自定义说说主题，可选【仅1.1.0版本及以上使用】
-                });
-            </script>
-    
-        </div>
-        <a style="padding:2%;" href="/"><i class="iconfont iconicon-arrow-left2">返回</i></a>
-        <br>
-        <br>
-    </div>
-    <footer id="footer">
-        <script type="text/javascript" src="source/js/footer.js"></script>
-    </footer>
+        <!-- 文章2 -->
+        <article>
+            <h1 class="article-title">网络安全设备配置与管理</h1>
+            <div class="article-content">
+                <p>一、网络设备安全配置的重要性</p>
+                <p>网络设备的安全配置是确保网络系统稳定、安全运行的关键。在当今的信息化时代，网络攻击事件频发，黑客利用各种漏洞进行非法入侵和数据窃取。因此，加强网络设备的安全配置，对于保护企业数据安全、维护用户利益具有重要意义。
 
+安全配置不仅能够有效防止外部攻击，还能够减少内部误操作带来的风险。通过合理的安全策略设置和权限分配，可以避免未经授权的访问和操作，从而降低数据泄露和系统损坏的可能性。
+
+此外，随着云计算、物联网等新技术的广泛应用，网络设备的安全配置也面临着新的挑战和要求。只有不断更新安全策略、提升防范能力，才能应对日益复杂的网络环境。</p>
+                <p>二、网络设备安全配置的关键步骤</p>
+                <p>1. 确定安全需求：在进行安全配置前，需要明确网络系统的安全需求，包括保护对象、风险等级、访问控制等。这有助于制定针对性的安全策略。
+
+2. 制定安全策略：根据安全需求，制定详细的安全策略，包括用户权限分配、访问控制规则、数据加密方式等。安全策略应具有可操作性和可审计性。
+
+3. 实施安全配置：按照安全策略进行网络设备的配置，包括防火墙设置、路由器配置、交换机安全设置等。确保每个设备的安全功能得到有效启用。
+
+4. 验证和测试：配置完成后，需要对网络系统进行全面的验证和测试，确保安全策略得到有效执行，不存在安全漏洞。</p>
+                <!-- 在这里添加文章2的更多段落 -->
+            </div>
+            <footer>
+                <p class="source-link">文章来源：<a href="https://blog.csdn.net/ZL_1618/article/details/143125435#" target="_blank">源网址2</a></p>
+            </footer>
+        </article>
+        
+        <!-- 更多文章可以按照上面的格式继续添加 -->
+    </section>
 </body>
 </html>
